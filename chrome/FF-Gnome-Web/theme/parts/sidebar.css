@@ -1,0 +1,204 @@
+
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+:root:has(#tabbrowser-tabbox[sidebar-shown]) {
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		--gnome-headerbar-background: var(--gnome-sidebar-background);
+		&:-moz-window-inactive {
+			--gnome-headerbar-background: var(--gnome-sidebar-background) !important;
+		}
+	}
+}
+
+
+#sidebar-main {
+	--button-size-icon: var(--gnome-button-size) !important;
+	background-color: var(--gnome-sidebar-background) !important;
+}
+
+link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
+	.buttons-wrapper {
+		justify-content: center !important;
+		min-height: calc(var(--gnome-button-size) + (var(--gnome-toolbar-padding) * 2)) !important;
+
+		@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+			padding-block-end: 0 !important;
+		}
+	}
+
+	.tools-and-extensions {		
+		&[orientation="horizontal"] {
+			padding: var(--gnome-toolbar-padding) !important;
+		}
+	}
+	
+	.actions-list {
+		& > moz-button:not(.tools-overflow) {
+			--button-outer-padding-inline: var(--gnome-toolbar-padding) !important;
+			--button-outer-padding-block: calc(var(--gnome-toolbar-spacing) / 2) !important;
+			--toolbarbutton-active-background: var(--gnome-selected-color) !important;
+
+			&:last-of-type {
+				--button-outer-padding-block-end: var(--gnome-toolbar-padding) !important;
+			}
+			&:first-of-type {
+				--button-outer-padding-block-start: var(--gnome-toolbar-padding) !important;
+			}
+		}
+	}
+}
+
+
+#sidebar-box {
+	background-color: var(--gnome-sidebar-background) !important;
+	padding: 0 !important;
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
+			padding: var(--gnome-toolbar-padding) !important;
+			padding-top: 0 !important;
+		}		
+	}
+}
+
+#sidebar-box:-moz-window-inactive label, #sidebar-box:-moz-window-inactive image,
+.sidebar-panel:-moz-window-inactive label, .sidebar-panel:-moz-window-inactive image,
+.tools-and-extensions:-moz-window-inactive,
+.sidebar-placesTreechildren:-moz-window-inactive {
+	opacity: 0.7 !important;
+}
+
+#sidebar {
+	background-color: var(--gnome-secondary-sidebar-background) !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	outline: 0 !important;
+	
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#tabbrowser-tabbox[sidebar-shown]) & {
+			background-color: var(--gnome-card-background) !important;
+			border-radius: var(--gnome-card-radius) !important;
+			box-shadow: var(--gnome-card-shadow) !important;
+		}
+	}
+}
+
+#sidebar-search-container {
+	padding: var(--gnome-toolbar-padding) !important;
+}
+
+
+#sidebar-splitter,
+#sidebar-launcher-splitter {
+	background-color: var(--gnome-sidebar-background) !important;
+	border: 0 !important;
+	margin: 0 !important;
+	outline: 0 !important;
+	transition: none !important;
+	width: 0 !important;
+	
+	@media not -moz-pref("sidebar.revamp.round-content-area") {
+		border-right: 1px solid var(--gnome-toolbar-border-color) !important;
+	}
+	
+	@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
+		display: flex !important;
+    }
+}
+
+#sidebar-launcher-splitter {
+	@media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+		#browser:has(#sidebar-box[sidebar-panel-open]) & {
+			border-right-width: 1px !important;
+		}
+	}
+}
+
+#sidebar-tools-and-extensions-splitter {
+	background: transparent !important;
+	margin-block: 0 !important;
+}
+
+.sidebar-panel {
+	padding-block: 12px !important;
+	box-sizing: border-box !important;
+	
+	.sidebar-panel-heading  {
+		margin-block-end: 12px !important;
+	}
+}
+#sidebar-panel-header {
+	padding-block: 0 !important;
+	padding-inline: var(--gnome-content-padding) !important;
+}
+.sidebar-panel-heading {
+	padding-block: var(--gnome-content-padding) !important;
+
+	> h4 {
+		margin: 0 !important;
+	}
+}
+sidebar-panel-header {
+	margin-block-start: 0 !important;
+	padding: 0 !important;
+}
+
+
+
+.sidebar-panel .customize-group .extensions,
+link[href="chrome://global/content/elements/moz-fieldset.css"] ~ fieldset #inputs {
+	background: var(--gnome-card-background) !important;
+	border: 0 !important;
+	border-radius: var(--gnome-card-radius) !important;
+	box-shadow: var(--gnome-card-shadow);
+	margin-top: 12px !important;
+	padding: 0 !important;
+}
+
+.sidebar-panel {
+	moz-checkbox, moz-radio, .customize-group .extension-item {
+		display: flex !important;
+		padding: 0 !important;
+
+		&:not(:last-of-type) {
+			border-bottom: 1px solid var(--gnome-card-shade-color) !important;
+		}
+		&[slot="nested"]:first-of-type {
+			border-top: 1px solid var(--gnome-card-shade-color) !important;
+		}
+	}
+	
+	moz-checkbox, moz-radio {
+		flex-direction: column;
+		justify-content: center;
+		margin-block-start: 0 !important;
+	}
+	
+	.customize-group .extension-item {
+		align-items: center;
+		min-height: 50px !important;
+		padding: 0 12px !important;
+		
+		&:not(:only-child) {
+			border-top: 1px solid var(--gnome-card-shade-color) !important;
+		}
+	}
+}
+
+link[href="chrome://global/content/elements/moz-input-common.css"]:has(~ .nested) {
+	& ~ .content-wrapper {
+		margin-inline: 12px;
+		#label {
+			align-items: center;
+			display: flex !important;
+			gap: var(--gnome-toolbar-spacing);
+			min-height: 50px !important;
+		}
+	}
+
+	& ~ .nested {
+		gap: 0 !important;
+		margin: 0 !important;
+	}
+}

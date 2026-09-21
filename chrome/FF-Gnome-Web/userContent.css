@@ -1,0 +1,10 @@
+@import "theme/variables.css";
+@import "theme/colors/light.css";
+@import "theme/colors/dark.css";
+
+@import "theme/pages/newtab.css";
+@import "theme/pages/privatebrowsing.css";
+
+@import "theme/parts/video-player.css";
+
+@import "customContent.css";

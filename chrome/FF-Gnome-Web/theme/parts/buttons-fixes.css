@@ -1,0 +1,261 @@
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+
+moz-button {
+	--button-size-icon-small: var(--gnome-button-size) !important;
+}
+
+
+link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.button-menu-dropmarker {
+	appearance: none !important;
+	margin: 0 !important;
+	margin-inline-start: 6px !important;
+}
+
+
+#nav-bar {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+}
+
+
+.popup-notification-dropmarker dropmarker {
+	margin-inline-start: 0 !important;
+}
+.popup-notification-dropmarker > .button-box > hbox {
+	display: -moz-box !important;
+}
+
+
+.subviewbutton.subviewbutton-iconic:not(.subviewbutton-back, .unified-extensions-item-action-button) {
+	justify-content: center !important;
+}
+
+
+#appMenu-fullscreen-button2 > .toolbarbutton-icon {
+	background: transparent !important;
+}
+
+
+toolbar .unified-extensions-item {
+	margin-inline: 0 3px !important;
+}
+
+
+#label-box:not([native]) {
+    font-weight: 400 !important;
+	padding: 0 8px;
+}
+dropmarker:not([native]) {
+	margin-right: 8px;
+}
+
+
+#nav-bar toolbarbutton.bookmark-item {
+	width: auto !important;
+}
+#nav-bar toolbarbutton.bookmark-item .toolbarbutton-icon {
+	margin-left: 6px;
+}
+#nav-bar toolbarbutton.bookmark-item .toolbarbutton-text {
+	padding-right: 6px;
+}
+
+
+#library-animatable-box  {
+	--library-button-height: 46px !important;
+	--library-icon-x: 1716px !important;
+	
+}
+#library-button[animate] > .toolbarbutton-icon {
+	fill: transparent !important;
+}
+
+
+.close-icon:not(.tab-close-button) .toolbarbutton-icon {
+	height: 16px !important;
+	width: 16px !important;
+	margin: 6px !important;
+	padding: 0 !important;
+}
+button.close {
+	margin: 0 !important;
+}
+
+#appMenu-popup .panel-banner-item[notificationid="update-restart"]::after {
+	display: none !important;
+}
+
+
+.identity-popup-preferences-button:not(#hack) {
+	list-style-image: url("chrome://browser/skin/settings.svg") !important;
+}
+#tracking-protection-preferences-button > .toolbarbutton-text {
+	padding-inline-end: 0 !important;
+}
+.protections-popup-footer-button-label {
+	margin-inline-start: 3px !important;
+}
+
+
+.findbar-container .findbar-find-previous image,
+.findbar-container .findbar-find-next image {
+	margin: 6px !important;
+	opacity: 1 !important;
+}
+.findbar-container toolbarbutton:focus {
+	outline: 0 !important;
+}
+
+
+#sidebar-header {
+	font-size: 1em !important;
+}
+
+#sidebar-switcher-target {
+	flex: unset !important;
+}
+
+#sidebar-switcher-arrow {
+	opacity: 1 !important;
+}
+
+
+#viewButton {
+	margin: 0 !important;
+	margin-inline-start: 6px !important;
+}
+
+
+#identity-popup-popup-menulist {
+	margin-right: 0 !important;
+}
+
+
+.autocomplete-richlistitem[type="loginsFooter"] {
+	margin: 4px 4px 0 4px !important;
+}
+
+
+.tracking-protection-button {
+	margin-inline-end: 0 !important;
+}
+
+
+.identity-popup-permission-remove-button {
+	opacity: 1 !important;
+}
+
+
+#identity-popup-security {
+	-moz-box-align: center;
+}
+#identity-popup-security-expander {
+	width: 34px !important;
+}
+#identity-popup-security-expander .button-icon {
+	margin: 0 !important;
+}
+
+
+#protections-popup-info-button {
+	margin: 0 !important;
+	margin-inline-end: 0 !important;
+}
+.protections-popup-footer-icon {
+	display: none !important;
+}
+.protections-popup-footer-button-label {
+    margin-inline-start: 0 !important;
+}
+#protections-popup-footer-protection-type-label {
+    margin-inline-end: 0 !important;
+	margin-block: 0 !important;
+}
+
+
+.close-icon:not(.tab-close-button) .toolbarbutton-icon {
+	outline:  0 !important;
+}
+
+
+#downloads-indicator-progress-inner {
+	background: conic-gradient(var(--gnome-toolbar-icon-fill) var(--download-progress-pcent), transparent var(--download-progress-pcent)) !important;
+	background-color: var(--gnome-button-active-background) !important;
+}
+#downloads-indicator-progress-outer,
+#downloads-indicator-start-image,
+#downloads-indicator-finish-image {
+	border: 0 !important;
+	padding: 0 !important;
+	border-radius: 100% !important;
+}
+#downloads-indicator-progress-outer,
+#downloads-indicator-start-image {
+	background: var(--gnome-toolbar-border-color) !important;
+}
+#downloads-indicator-finish-image {
+	background: var(--gnome-toolbar-icon-fill) !important;
+}
+
+#downloads-button[progress="true"] #downloads-indicator-progress-outer {
+  visibility: visible !important;
+}
+#downloads-button:not([progress="true"]) #downloads-indicator-icon {
+  visibility: visible !important;
+}
+
+
+#downloads-button .toolbarbutton-animatable-box {
+	top: 8px !important;
+	left: 8px !important;
+}
+#downloads-button .toolbarbutton-animatable-box,
+#downloads-button .toolbarbutton-animatable-image,
+#downloads-indicator-progress-inner {
+	height: 16px !important;
+	width: 16px !important;
+}
+#downloads-button .toolbarbutton-animatable-image,
+#stop-reload-button  .toolbarbutton-animatable-image:not(#hack),
+#nav-bar-overflow-button  .toolbarbutton-animatable-image:not(#hack) {
+	--anim-steps: 1 !important;
+	transform: none !important;
+	list-style-image: none !important;
+	display: none !important;
+}
+
+
+#appMenu-popup .panel-banner-item {
+	margin: 0 0 6px !important;
+}
+#appMenu-popup .panel-banner-item > .toolbarbutton-text {
+	margin-inline: 0 !important;
+}
+
+
+#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
+	padding: 0 !important;
+}
+#fxa-avatar-image {
+	min-height: 24px !important;
+	width: 24px !important;
+}
+
+
+#select-translations-panel-settings-button > .toolbarbutton-text {
+	display: none !important;
+}
+
+
+@media -moz-pref("gnomeTheme.hideUnifiedExtensions") {
+	#unified-extensions-button {
+		display: none;
+	}
+}

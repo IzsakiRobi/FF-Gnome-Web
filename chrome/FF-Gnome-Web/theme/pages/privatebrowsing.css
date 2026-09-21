@@ -1,0 +1,15 @@
+
+
+@-moz-document url("about:privatebrowsing") {
+    html.private {
+        --background-color-canvas: var(--gnome-private-in-content-page-background) !important;
+
+        --in-content-text-color: var(--gnome-private-text-primary-color) !important;
+    }
+    .wordmark {
+        fill: var(--gnome-private-wordmark) !important;
+    }
+    .showPrivate {
+        color: var(--gnome-private-text-primary-color);
+    }
+}

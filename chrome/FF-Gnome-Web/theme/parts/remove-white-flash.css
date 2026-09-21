@@ -1,0 +1,8 @@
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+
+#tabbrowser-tabpanels,
+#tabbrowser-tabpanels[pendingpaint],
+browser {
+	background-color: var(--gnome-window-background) !important;
+}

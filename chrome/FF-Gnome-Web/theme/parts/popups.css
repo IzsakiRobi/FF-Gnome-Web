@@ -1,0 +1,251 @@
+
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+menupopup, panel {
+	--gnome-menu-item-block-padding: 4px;
+	--gnome-menu-item-inline-padding: 12px;
+	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
+	--gnome-menu-item-inline-margin: var(--gnome-menu-padding);
+	--gnome-menu-item-margin: 0 var(--gnome-menu-item-inline-margin);
+	--gnome-menu-item-radius: var(--gnome-button-radius);
+	
+	--panel-background: var(--gnome-menu-background) !important;
+	--panel-border-radius: var(--gnome-popover-radius) !important;
+	--panel-padding: var(--gnome-menu-padding) !important;	
+	--panel-shadow: var(--gnome-menu-shadow) !important;
+	--panel-separator-color: var(--gnome-menu-separator-color) !important;
+	--panel-separator-padding-vertical: var(--gnome-menu-padding) !important;
+	--panel-separator-padding-horizontal: var(--gnome-menu-padding) !important;
+	
+	
+	--menuitem-padding: var(--gnome-menu-item-padding) !important;
+	--menuitem-margin: var(--gnome-menu-item-margin) !important;
+	--menuitem-border-radius: var(--gnome-menu-item-radius) !important;
+	
+	
+	--arrowpanel-padding: var(--gnome-menu-padding) !important;
+	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
+	--arrowpanel-border-radius: var(--gnome-popover-radius) !important;
+	--arrowpanel-menuitem-margin: var(--gnome-menu-item-margin) !important;
+	--arrowpanel-menuitem-padding: var(--gnome-menu-item-padding) !important;
+	--arrowpanel-menuitem-border-radius: var(--gnome-menu-item-radius) !important;
+}
+
+panel:not([remote]) {
+	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--arrowpanel-color: var(--gnome-menu-color) !important;
+	--panel-item-hover-bgcolor: var(--gnome-selected-background) !important;
+}
+
+
+menupopup {
+	appearance: none !important;	
+	color: var(--gnome-window-color) !important;
+}
+menuseparator {
+	padding: var(--gnome-menu-padding) 0 !important;
+}
+menucaption {
+	color: var(--gnome-window-color) !important;
+}
+menulist {
+	padding: 0px !important;
+}
+
+.menupopup-arrowscrollbox {
+	appearance: none !important;
+	border: 0 !important;
+}
+
+
+@media not -moz-pref("gnomeTheme.noThemedIcons") {
+	menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
+	menuitem[type="radio"] .menu-icon {
+		visibility: collapse !important;
+	}
+}
+
+menuitem {
+	padding-inline-end: 18px !important;
+	
+	&:not([acceltext]) .menu-accel-container {
+		visibility: collapse !important;
+	}
+	
+	&[badge]::after {
+		align-items: center;
+		background-color: var(--gnome-trough-background) !important;
+		border-radius: 14px !important;
+		border: 0 !important;
+		color: var(--gnome-menu-color);
+		display: flex;
+		height: 28px !important;
+		padding: 0 12px !important;
+	}
+	
+	&.badge-new::after {
+		color: var(--gnome-accent) !important;
+	}
+}
+
+menu, menuitem {
+	margin-inline: 0 !important;
+	&:where([_moz-menuactive]:not([disabled="true"])) {
+		color: currentColor;
+		background-color: transparent !important;
+	}
+}
+
+menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
+	background: transparent !important;
+}
+
+.menu-iconic-icon {
+	padding: 0 !important;
+}
+
+
+panel[type=arrow] {
+	margin-top: var(--gnome-menu-padding) !important; 
+}
+
+panel toolbarseparator {
+	padding-block: var(--gnome-menu-padding) !important;
+}
+
+
+.panel-header {
+	position: relative !important;
+}
+.panel-header + toolbarseparator {
+	display: none !important; 
+}
+
+.subviewbutton-back {
+	opacity: 1 !important;
+	width: 100%;
+	-moz-box-align: center !important;
+	-moz-box-pack: start !important;
+}
+.subviewbutton-back + h1 {
+	font-weight: normal !important;
+	left: 0 !important;
+	padding: 0 !important;
+	pointer-events: none;
+	position: absolute !important;
+	top: 14px !important;
+	width: 100%;
+}
+
+.subview-subheader,
+.PanelUI-remotetabs-clientcontainer label {
+	font: menu !important;
+	font-weight: bold !important;
+}
+
+
+.panel-footer {
+	margin: var(--gnome-menu-padding) !important;
+	margin-top: 0 !important;
+}
+
+
+menuitem, menupopup menu, panelview .toolbarbutton-1,
+.subviewbutton:not(#appMenu-fxa-label2, .toolbaritem-combined-buttons),
+.widget-overflow-list .toolbarbutton-1 {
+	color: var(--gnome-window-color) !important;
+	min-height: 32px !important;
+
+	&:hover, &[_moz-menuactive], &:focus, &:focus-within {
+		&:not([disabled="true"]) {
+			background: var(--gnome-selected-color) !important;
+		}
+		outline: 0 !important;
+	}
+
+	&[disabled="true"] {
+		opacity: .5 !important;
+	}
+
+	&[disabled="true"][_moz-menuactive] {
+		background: transparent !important;
+	}
+}
+
+.moz-button-subviewbutton-nav {
+	--button-border-radius: var(--gnome-menu-item-radius) !important;
+	margin: var(--gnome-menu-item-margin) !important;
+}
+
+
+#PlacesToolbar menupopup[placespopup="true"] menuseparator {
+	border-top: 1px solid var(--gnome-menu-separator-color) !important;
+	padding: 0 !important;
+	margin: var(--gnome-menu-padding) 0 !important;
+}
+#PlacesToolbar menupopup[placespopup="true"] menuseparator::before {
+	border: 0 !important;
+}
+
+
+#contentAreaContextMenu {
+    appearance: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 6px !important;
+    margin: -8px 0 0 -8px !important;
+    --panel-border-radius: 12px !important;
+    --panel-background: #ffffff !important;
+}
+#contentAreaContextMenu > .popup-internal-box {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin: 0 !important;
+}
+#contentAreaContextMenu menuitem,
+#contentAreaContextMenu menu {
+    appearance: none !important;
+    border-radius: var(--gnome-button-radius) !important;
+    margin-inline: 1px !important;
+    margin-block: 0 !important;
+    padding-block: 4px !important;
+    padding-inline: 12px !important;
+    background-color: transparent !important;
+    color: #2e2e2e !important;
+}
+#contentAreaContextMenu menuitem[_moz-menuactive="true"],
+#contentAreaContextMenu menu[_moz-menuactive="true"] {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    color: #000000 !important;
+}
+#contentAreaContextMenu menuseparator {
+    appearance: none !important;
+    background: transparent !important;
+    border: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    margin-inline: 1px !important;
+    min-height: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+}
+
+#appMenu-popup {
+    --panel-menuitem-margin: 0 7px !important;
+}
+
+#BMB_bookmarksPopup menu,
+#BMB_bookmarksPopup menuitem {
+    margin-inline: 1px !important;
+}
+
+#appMenu-popup panelview .toolbarbutton-1:hover,
+#appMenu-popup .subviewbutton:hover {
+    border-radius: var(--gnome-button-radius) !important;
+}
