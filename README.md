@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://raw.githubusercontent.com/IzsakiRobi/FF-Gnome-Web/main/Screenshots/Main-Window.png">
+    <img src="Screenshots/Main-Window.png" width="600" alt="FF-Gnome-Web main window" />
+  </a>
+</p>
+
 # FF-Gnome-Web
 
 A simplified version of [Firefox GNOME Theme](https://github.com/rafaelmardojai/firefox-gnome-theme), with compatibility fixes for Firefox 154, 155 and 156, plus various visual glitch fixes.
