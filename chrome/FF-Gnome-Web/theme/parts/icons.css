@@ -659,3 +659,37 @@ toolbar .toolbarbutton-1[label="Authenticator"],
         filter: brightness(0) invert(1) !important;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    #urlbar #tracking-protection-icon,
+    #urlbar #identity-icon,
+    #urlbar #trust-icon,
+    #urlbar #permissions-granted-icon,
+    #urlbar .blocked-permission-icon,
+    #urlbar .notification-anchor-icon,
+    #urlbar .urlbar-page-action .urlbar-icon,
+    #urlbar #star-button,
+    #urlbar #translations-button-icon,
+    #urlbar #translations-button-circle-arrows,
+    #urlbar .urlbar-go-button,
+    .menu-right,
+    menupopup > menu::after,
+    .subviewbutton-nav::after,
+    .subviewbutton-back .toolbarbutton-icon,
+    .protections-popup-category::after,
+    .toolbarbutton-combined-buttons-dropmarker,
+    .button-menu-dropmarker,
+    .menulist-dropmarker,
+    #sidebar-switcher-arrow,
+    link[href="chrome://global/skin/dropmarker.css"] + image {
+        filter: brightness(0) invert(1) !important;
+    }
+
+    .menu-right,
+    menupopup > menu::after,
+    .subviewbutton-nav::after,
+    .subviewbutton-back .toolbarbutton-icon,
+    .protections-popup-category::after {
+        opacity: 0.7 !important;
+    }
+}
