@@ -1,7 +1,6 @@
 FF-Gnome-Web options
 
 Create Boolean preferences in about:config. True enables the listed behavior; false disables it. Restart Firefox after changes.
-Old gnomeTheme.* preferences must be recreated as gnomeWeb.*.
 
 - gnomeWeb.hidePageLoadingBar - Hide loading indicator
 - gnomeWeb.hideSingleTab - Hide the tab bar with one tab
