@@ -19,7 +19,7 @@ Modified by [IzsakiRobi](https://github.com/IzsakiRobi). Many thanks to [rafaelm
 
 ## Theme options
 
-Create Boolean preferences in `about:config`; set to `true` to enable, then restart Firefox. Existing `gnomeTheme.*` preferences must be recreated as `gnomeWeb.*`.
+Create Boolean preferences in `about:config`; set to `true` to enable, then restart Firefox.
 
 - `gnomeWeb.hidePageLoadingBar` - Hide loading indicator
 - `gnomeWeb.hideSingleTab` - Hide the tab bar with one tab
