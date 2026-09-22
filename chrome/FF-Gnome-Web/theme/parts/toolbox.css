@@ -139,7 +139,7 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 	border-image-source: none !important;
 	border-color: var(--gnome-tabbar-tab-separator-color) !important;
 }
-@media -moz-pref("gnomeTheme.bookmarksOnFullscreen") { 
+@media -moz-pref("gnomeWeb.bookmarksOnFullscreen") { 
 	:root[inFullscreen] #PersonalToolbar{
 		visibility: visible !important;
 	}
@@ -170,14 +170,14 @@ link[href="chrome://global/content/elements/moz-message-bar.css"] ~ .container {
 }
 
 
-@media -moz-pref("gnomeTheme.hideWebrtcIndicator") {
+@media -moz-pref("gnomeWeb.hideWebrtcIndicator") {
 	#webrtcIndicator {
 		display: none;
 	}
 }
 
 
-@media -moz-pref("gnomeTheme.bookmarksToolbarUnderTabs") {
+@media -moz-pref("gnomeWeb.bookmarksToolbarUnderTabs") {
 	#navigator-toolbox #PersonalToolbar {
 		order: 3;
 	}

@@ -3,7 +3,7 @@
 @import "icons/icons.css";
 @import "colors/light.css";
 @import "colors/dark.css";
-@import "colors/black.css" screen and -moz-pref("gnomeTheme.oledBlack"); 
+@import "colors/black.css" screen and -moz-pref("gnomeWeb.oledBlack"); 
 
 
 @import "parts/toolbox.css";
@@ -29,9 +29,10 @@
 @import "parts/remove-white-flash.css";
 
 
-@import "system-icons.css" screen and -moz-pref("gnomeTheme.systemIcons");
-@import "symbolic-tab-icons.css" screen and -moz-pref("gnomeTheme.symbolicTabIcons");
+@import "system-icons.css" screen and -moz-pref("gnomeWeb.systemIcons");
+@import "symbolic-tab-icons.css" screen and -moz-pref("gnomeWeb.symbolicTabIcons");
 
 @import "parts/download-panel.css";
+@import "parts/urlbar-loading.css";
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";

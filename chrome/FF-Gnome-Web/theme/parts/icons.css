@@ -118,7 +118,7 @@ button.close::before {
 	padding-inline: 0 !important;
 }
 
-@media not -moz-pref("gnomeTheme.noThemedIcons") {
+@media not -moz-pref("gnomeWeb.noThemedIcons") {
 	
 	#scrollbutton-up {
 		list-style-image: var(--scrollbutton-icon-name) !important;

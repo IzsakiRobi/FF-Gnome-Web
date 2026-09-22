@@ -59,7 +59,7 @@ menulist {
 }
 
 
-@media not -moz-pref("gnomeTheme.noThemedIcons") {
+@media not -moz-pref("gnomeWeb.noThemedIcons") {
 	menuitem:is([type="checkbox"], [checked="true"]) .menu-icon,
 	menuitem[type="radio"] .menu-icon {
 		visibility: collapse !important;

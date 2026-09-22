@@ -1,0 +1,37 @@
+.tabbrowser-tab .tab-loading-burst {
+    display: none !important;
+}
+
+@media not -moz-pref("gnomeWeb.hidePageLoadingBar") {
+    #urlbar .urlbar-input-container {
+        position: relative !important;
+    }
+
+    :root:has(.tabbrowser-tab[selected][busy]) #urlbar:not(:has(.urlbar-input:placeholder-shown)) .urlbar-input-container::after {
+        content: "";
+        position: absolute;
+        inset-inline: 8px;
+        bottom: 1px;
+        height: 2px;
+        border-radius: 2px;
+        pointer-events: none;
+        z-index: 2;
+        background-image: linear-gradient(var(--gnome-accent), var(--gnome-accent));
+        background-size: 35% 100%;
+        background-repeat: no-repeat;
+        animation: gnome-urlbar-loading 1.3s ease-in-out infinite alternate;
+    }
+
+    @keyframes gnome-urlbar-loading {
+        from { background-position: 0% 0; }
+        to { background-position: 100% 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        :root:has(.tabbrowser-tab[selected][busy]) #urlbar:not(:has(.urlbar-input:placeholder-shown)) .urlbar-input-container::after {
+            animation: none;
+            background-size: 100% 100%;
+            opacity: 0.65;
+        }
+    }
+}

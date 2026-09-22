@@ -254,7 +254,7 @@ button.close {
 }
 
 
-@media -moz-pref("gnomeTheme.hideUnifiedExtensions") {
+@media -moz-pref("gnomeWeb.hideUnifiedExtensions") {
 	#unified-extensions-button {
 		display: none;
 	}

@@ -82,7 +82,7 @@
 				margin: 0 !important;			
 				
 				& > .toolbarbutton-icon {					
-					@media not -moz-pref("gnomeTheme.noThemedIcons") {
+					@media not -moz-pref("gnomeWeb.noThemedIcons") {
 						background: none !important;
 						appearance: none !important;
 						height: 16px !important;
@@ -111,7 +111,7 @@
 }
 
 
-@media -moz-pref("gnomeTheme.dragWindowHeaderbarButtons") {
+@media -moz-pref("gnomeWeb.dragWindowHeaderbarButtons") {
 	:root[customtitlebar] #nav-bar *,
 	:root[customtitlebar] #titlebar .titlebar-button {
 		-moz-window-dragging: drag;
