@@ -10,7 +10,7 @@ FF-Gnome-Web is a streamlined customization of the original [Firefox GNOME Theme
 
 It also includes Firefox 154–156 compatibility fixes, Adwaita-style visual refinements, dark mode fixes, a redesigned downloads panel, and an optional animated loading indicator in the address bar. The settings use a consistent `gnomeWeb.*` naming scheme and are documented in `chrome/themeOptions.txt`.
 
-This is a cleanup and refinement of the original project, not a rewrite. Modified by [IzsakiRobi](https://github.com/IzsakiRobi)—all credit to [rafaelmardojai](https://github.com/rafaelmardojai) for the excellent foundation!
+This is a cleanup and refinement of the original project, not a rewrite. Modified by [IzsakiRobi](https://github.com/IzsakiRobi) all credit to [rafaelmardojai](https://github.com/rafaelmardojai) for the excellent foundation!
 
 ## Installation
 
