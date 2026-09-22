@@ -1,0 +1,271 @@
+#downloads-button {
+    --downloads-toolbar-image: url("../icons/download-complete.svg");
+}
+
+#downloads-button[progress="true"],
+#downloads-button[notification="start"] {
+    --downloads-toolbar-image: url("../icons/download-progress.svg");
+}
+
+#downloads-button > .toolbarbutton-badge-stack {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+#downloads-button #downloads-indicator-anchor {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+}
+
+#downloads-button #downloads-indicator-icon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    list-style-image: none !important;
+    mask-image: var(--downloads-toolbar-image) !important;
+    mask-mode: alpha !important;
+    mask-size: contain !important;
+    mask-position: center !important;
+    mask-repeat: no-repeat !important;
+    background-color: light-dark(#1e1e1e, #fafafa) !important;
+    -moz-context-properties: fill, fill-opacity !important;
+    fill: light-dark(#1e1e1e, #fafafa) !important;
+    fill-opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    scale: 1 !important;
+}
+
+#downloads-button:is([attention="warning"], [attention="severe"]) #downloads-indicator-icon {
+    fill: var(--gnome-destructive) !important;
+    background-color: var(--gnome-destructive) !important;
+}
+
+#downloads-button #downloads-indicator-start-box,
+#downloads-button #downloads-indicator-finish-box {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#downloads-button #downloads-indicator-progress-outer {
+    display: none !important;
+}
+
+#downloads-button[progress="true"] #downloads-indicator-progress-outer {
+    position: absolute !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    direction: ltr !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    inset: auto !important;
+    top: calc(50% + 8px) !important;
+    inset-inline-start: calc(50% - 10px) !important;
+    width: 20px !important;
+    height: 4px !important;
+    min-height: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 99px !important;
+    background: var(--gnome-trough-background) !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+#downloads-button[progress="true"] #downloads-indicator-progress-inner {
+    position: static !important;
+    margin: 0 !important;
+    inset: auto !important;
+    align-self: stretch !important;
+    width: var(--download-progress-pcent, 0%) !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    flex: none !important;
+    border-radius: inherit !important;
+    background: var(--gnome-accent-bg) !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+#downloadsPanel-multiView,
+#downloadsPanel-multiView > .panel-viewcontainer,
+#downloadsPanel-multiView > .panel-viewcontainer > .panel-viewstack,
+#downloadsPanel-mainView {
+    box-sizing: border-box !important;
+    width: min(520px, 90vw) !important;
+    min-width: 0 !important;
+    max-width: min(520px, 90vw) !important;
+}
+
+#downloadsPanel-mainView {
+    position: relative !important;
+    box-sizing: border-box !important;
+    padding: 48px 12px 12px !important;
+    min-width: 0 !important;
+    color: var(--gnome-window-color) !important;
+}
+
+#downloadsPanel #downloadsListBox {
+    min-width: 0 !important;
+    max-height: 320px !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+}
+
+#downloadsPanel #downloadsListBox > richlistitem {
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 64px !important;
+    padding: 8px 12px !important;
+    border-radius: var(--gnome-button-radius) !important;
+    color: var(--gnome-window-color) !important;
+}
+
+#downloadsPanel #downloadsListBox > richlistitem:hover {
+    background: var(--gnome-hover-color) !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadTypeIcon {
+    width: 24px !important;
+    height: 24px !important;
+    margin-inline: 0 12px !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadContainer {
+    min-width: 0 !important;
+    margin-inline-end: 8px !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadTarget {
+    font-weight: 600 !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadProgress {
+    appearance: none !important;
+    height: 4px !important;
+    min-height: 4px !important;
+    margin-block: 4px !important;
+    border: 0 !important;
+    border-radius: 99px !important;
+    background: var(--gnome-trough-background) !important;
+    color: var(--gnome-window-color) !important;
+    overflow: hidden !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadProgress::-moz-progress-bar {
+    background: var(--gnome-accent-bg) !important;
+    border-radius: inherit !important;
+}
+
+#downloadsPanel-mainView::before {
+    content: "Downloads";
+    position: absolute;
+    top: 12px;
+    inset-inline-start: 16px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--gnome-window-color);
+}
+
+#downloadsPanel-mainView > .panel-view-body-unscrollable {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+}
+
+#downloadsPanel #downloadsListBox {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+#downloadsPanel #downloadsListBox > richlistitem {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+}
+
+#downloadsPanel #downloadsListBox .downloadMainArea {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+#downloadsPanel #downloadsFooter {
+    position: absolute !important;
+    top: 12px !important;
+    inset-inline-end: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#downloadsPanel #downloadsFooter > stack,
+#downloadsPanel #downloadsFooterButtons {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    background: transparent !important;
+}
+
+#downloadsPanel #downloadsFooterButtons > toolbarseparator {
+    display: none !important;
+}
+
+#downloadsPanel #downloadsHistory {
+    appearance: none !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+    min-width: 76px !important;
+    min-height: 28px !important;
+    height: 28px !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    border: 0 !important;
+    border-radius: 99px !important;
+    background: var(--gnome-accent-bg) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+#downloadsPanel #downloadsHistory:hover {
+    background: color-mix(in srgb, var(--gnome-accent-bg) 90%, white) !important;
+}
+
+#downloadsPanel #downloadsHistory:active {
+    background: color-mix(in srgb, var(--gnome-accent-bg) 85%, black) !important;
+}
+
+#downloadsPanel #downloadsHistory > .button-box {
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: center !important;
+}
+
+#downloadsPanel #downloadsHistory .button-text {
+    font-size: 0 !important;
+    margin: 0 !important;
+}
+
+#downloadsPanel #downloadsHistory .button-text::before {
+    content: "Show all";
+    font-size: 12px;
+    line-height: 28px;
+    color: white;
+}

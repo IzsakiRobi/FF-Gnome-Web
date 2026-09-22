@@ -32,4 +32,6 @@
 @import "system-icons.css" screen and -moz-pref("gnomeTheme.systemIcons");
 @import "symbolic-tab-icons.css" screen and -moz-pref("gnomeTheme.symbolicTabIcons");
 
+@import "parts/download-panel.css";
+
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
