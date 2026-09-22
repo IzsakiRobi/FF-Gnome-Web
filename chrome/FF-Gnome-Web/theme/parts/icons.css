@@ -693,3 +693,22 @@ toolbar .toolbarbutton-1[label="Authenticator"],
         opacity: 0.7 !important;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    #context-navigation .menu-iconic-icon,
+    #context-navigation .menu-icon,
+    #appMenu-zoomReduce-button2 .toolbarbutton-icon,
+    #appMenu-zoomEnlarge-button2 .toolbarbutton-icon,
+    #appMenu-fullscreen-button2 .toolbarbutton-icon,
+    #unified-extensions-panel .unified-extensions-item-menu-button .toolbarbutton-icon {
+        filter: brightness(0) invert(1) !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    menuitem[checked]::before,
+    menuitem[checked] > .menu-icon,
+    menuitem[checked] > .menu-iconic-left > .menu-iconic-icon {
+        filter: brightness(0) invert(1) !important;
+    }
+}

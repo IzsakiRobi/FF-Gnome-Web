@@ -197,14 +197,14 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
     padding: 6px !important;
     margin: -8px 0 0 -8px !important;
     --panel-border-radius: 12px !important;
-    --panel-background: #ffffff !important;
+    --panel-background: var(--gnome-menu-background) !important;
 }
 #contentAreaContextMenu > .popup-internal-box {
-    background: #ffffff !important;
+    background: var(--gnome-menu-background) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid var(--gnome-menu-separator-color) !important;
     margin: 0 !important;
 }
 #contentAreaContextMenu menuitem,
@@ -216,18 +216,18 @@ menuitem, menupopup menu, panelview .toolbarbutton-1,
     padding-block: 4px !important;
     padding-inline: 12px !important;
     background-color: transparent !important;
-    color: #2e2e2e !important;
+    color: var(--gnome-menu-color) !important;
 }
 #contentAreaContextMenu menuitem[_moz-menuactive="true"],
 #contentAreaContextMenu menu[_moz-menuactive="true"] {
-    background-color: rgba(0, 0, 0, 0.06) !important;
-    color: #000000 !important;
+    background-color: var(--gnome-selected-color) !important;
+    color: var(--gnome-menu-color) !important;
 }
 #contentAreaContextMenu menuseparator {
     appearance: none !important;
     background: transparent !important;
     border: none !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-top: 1px solid var(--gnome-menu-separator-color) !important;
     margin-top: 6px !important;
     margin-bottom: 6px !important;
     margin-inline: 1px !important;

@@ -291,3 +291,10 @@
 	border: 0 !important;
 	margin-inline: 0 !important;
 }
+
+#unified-extensions-panel #unified-extensions-manage-extensions,
+#unified-extensions-panel .unified-extensions-item-action-button,
+#unified-extensions-panel .unified-extensions-item-menu-button,
+#unified-extensions-panel .unified-extensions-item {
+    border-radius: var(--gnome-menu-item-radius) !important;
+}
