@@ -644,3 +644,18 @@ toolbar .toolbarbutton-1[label="Authenticator"],
   height: 16px !important;
   padding: 0 !important;
 }
+
+@media (prefers-color-scheme: dark) {
+    #nav-bar .toolbarbutton-1:not(.webextension-browser-action):not(#downloads-button) > .toolbarbutton-icon,
+    #nav-bar .toolbarbutton-1:not(.webextension-browser-action):not(#downloads-button) > .toolbarbutton-badge-stack > .toolbarbutton-icon,
+    .titlebar-button .toolbarbutton-icon,
+    .tab-close-button,
+    #tabs-newtab-button .toolbarbutton-icon,
+    #new-tab-button .toolbarbutton-icon,
+    #alltabs-button .toolbarbutton-icon,
+    #vertical-tabs-newtab-button .toolbarbutton-icon,
+    #_bc9b2f41-2c11-4ef8-b5d2-e4f34818c58a_-browser-action .toolbarbutton-icon,
+    .webextension-browser-action[label="Authenticator"] .toolbarbutton-icon {
+        filter: brightness(0) invert(1) !important;
+    }
+}

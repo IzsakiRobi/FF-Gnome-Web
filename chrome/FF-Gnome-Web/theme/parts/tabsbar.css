@@ -302,7 +302,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 		
 		&:not([pinned])::before {
-			background: linear-gradient(to left, var(--gnome-tabbar-tab-close-overlay-bg) 50%, transparent);
+			background: none;
 			border-radius: 0 4px 4px 0;
 			bottom: 2px;
 			content: "";
