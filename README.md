@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://raw.githubusercontent.com/IzsakiRobi/FF-Gnome-Web/main/Screenshots/Main-Window.png">
-    <img src="Screenshots/Main-Window.png" width="600" alt="FF-Gnome-Web main window" />
+  <a href="https://raw.githubusercontent.com/IzsakiRobi/FF-Gnome-Web/main/Screenshots/Main-Window.jpg">
+    <img src="Screenshots/Main-Window.jpg" width="600" alt="FF-Gnome-Web main window" />
   </a>
 </p>
 
