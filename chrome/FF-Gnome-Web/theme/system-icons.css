@@ -86,6 +86,13 @@
 }
 
 
+#urlbar #star-button[starred] {
+	box-sizing: content-box !important;
+	width: 16px !important;
+	height: 16px !important;
+	align-self: center;
+}
+
 toolbar .toolbarbutton-1 > .toolbarbutton-icon,
 toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon,
 #downloads-indicator-icon {
