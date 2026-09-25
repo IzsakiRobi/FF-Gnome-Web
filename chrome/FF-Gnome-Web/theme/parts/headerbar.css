@@ -20,9 +20,19 @@
 	top: 0;
 	transform: translate(15px, -9px);
 	fill: var(--gnome-window-color) !important;
-	fill-opacity: 0.15 !important;
-	-moz-context-properties: fill, fill-opacity;
+	opacity: 0.1 !important;
+	-moz-context-properties: fill;
   }
+
+:root[privatebrowsingmode="temporary"]:-moz-window-inactive #nav-bar toolbarspring:first-of-type:before {
+	opacity: 0.05 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
+		filter: invert(1) !important;
+	}
+}
 
 
 .private-browsing-indicator-with-label {

@@ -12,4 +12,49 @@
     .showPrivate {
         color: var(--gnome-private-text-primary-color);
     }
+
+    @media -moz-pref("browser.theme.dark-private-windows"), (prefers-color-scheme: dark) {
+        html.private .info {
+            color: var(--gnome-palette-light-1) !important;
+        }
+    }
+
+    @media (prefers-color-scheme: light) and (not -moz-pref("browser.theme.dark-private-windows")) {
+        html.private {
+            --gnome-private-in-content-page-background: #eaf2fc;
+            color-scheme: light !important;
+        }
+
+        html.private, html.private body {
+            background: var(--gnome-private-in-content-page-background) !important;
+            color: var(--gnome-private-text-primary-color) !important;
+        }
+
+        html.private content-search-handoff-ui {
+            --content-search-handoff-ui-background-color: white !important;
+            --content-search-handoff-ui-color: var(--gnome-private-text-primary-color) !important;
+            --content-search-handoff-ui-fill: var(--gnome-toolbar-icon-fill) !important;
+            --content-search-handoff-ui-caret-color: var(--gnome-private-text-primary-color) !important;
+            --content-search-handoff-ui-border-width: 1px !important;
+            --content-search-handoff-ui-unfocused-border-color: var(--gnome-palette-blue-1) !important;
+            --content-search-handoff-ui-fakefocus-border-color: var(--gnome-palette-blue-3) !important;
+            --content-search-handoff-ui-fakefocus-box-shadow-inner: var(--gnome-palette-blue-3) !important;
+            --content-search-handoff-ui-fakefocus-box-shadow-outer: color-mix(in srgb, var(--gnome-palette-blue-3) 25%, transparent) !important;
+        }
+
+        html.private .info-border {
+            background: color-mix(in srgb, var(--gnome-palette-blue-1) 25%, transparent) !important;
+            box-shadow: none !important;
+        }
+
+        html.private .info {
+            background: white !important;
+            color: var(--gnome-private-text-primary-color) !important;
+            box-shadow: none !important;
+        }
+
+        html.private #private-browsing-myths {
+            color: var(--gnome-palette-blue-4) !important;
+        }
+    }
 }

@@ -164,9 +164,9 @@
 	
 	&[privatebrowsingmode="temporary"] {
 		
-		--gnome-headerbar-background: #f1eafa !important;
+		--gnome-headerbar-background: #eaf2fc !important;
 		&:-moz-window-inactive {
-			--gnome-headerbar-background: #f3eef9 !important;
+			--gnome-headerbar-background: #eaf0f7 !important;
 		}
 	}
 }

@@ -23,6 +23,7 @@ This is a cleanup and refinement of the original project, not a rewrite. Modifie
 
 Create Boolean preferences in `about:config`; set to `true` to enable, then restart Firefox.
 
+- `browser.theme.dark-private-windows` - `false`: light private windows; `true`: dark (Firefox default)
 - `gnomeWeb.hidePageLoadingBar` - Hide loading indicator
 - `gnomeWeb.hideSingleTab` - Hide the tab bar with one tab
 - `gnomeWeb.normalWidthTabs` - Use standard Firefox tab widths

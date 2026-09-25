@@ -17,6 +17,10 @@
 	background-color: var(--gnome-sidebar-background) !important;
 }
 
+:root[privatebrowsingmode="temporary"] #sidebar-container {
+	background: var(--gnome-tabbar-background) !important;
+}
+
 link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	.buttons-wrapper {
 		justify-content: center !important;
@@ -84,6 +88,11 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	}
 }
 
+:root[privatebrowsingmode="temporary"] #browser #sidebar-box,
+:root[privatebrowsingmode="temporary"] #browser #sidebar-box #sidebar {
+	background: color-mix(in srgb, var(--gnome-headerbar-background) 90%, white) !important;
+}
+
 #sidebar-search-container {
 	padding: var(--gnome-toolbar-padding) !important;
 }
@@ -115,6 +124,14 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 	}
 }
 
+@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
+	#sidebar-container:not([sidebar-panel-open]) + #sidebar-launcher-splitter {
+		min-width: 0 !important;
+		border: 0 !important;
+		background: transparent !important;
+	}
+}
+
 #sidebar-tools-and-extensions-splitter {
 	background: transparent !important;
 	margin-block: 0 !important;
@@ -130,7 +147,7 @@ link[href="chrome://browser/content/sidebar/sidebar-main.css"] + .wrapper {
 }
 #sidebar-panel-header {
 	padding-block: 0 !important;
-	padding-inline: var(--gnome-content-padding) !important;
+	padding-inline: var(--space-large) !important;
 }
 .sidebar-panel-heading {
 	padding-block: var(--gnome-content-padding) !important;

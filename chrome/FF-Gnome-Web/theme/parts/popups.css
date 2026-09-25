@@ -2,7 +2,7 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-menupopup, panel {
+menupopup:where(:not(.in-menulist)), panel {
 	--gnome-menu-item-block-padding: 4px;
 	--gnome-menu-item-inline-padding: 12px;
 	--gnome-menu-item-padding: var(--gnome-menu-item-block-padding) var(--gnome-menu-item-inline-padding);
@@ -39,9 +39,42 @@ panel:not([remote]) {
 }
 
 
-menupopup {
-	appearance: none !important;	
+menupopup:where(:not(.in-menulist)) {
+	appearance: none !important;
 	color: var(--gnome-window-color) !important;
+}
+
+menulist > menupopup {
+	appearance: auto !important;
+	color: revert !important;
+	background: revert !important;
+}
+
+menulist > menupopup menuitem {
+	appearance: auto !important;
+	color: revert !important;
+	background: revert !important;
+	background-color: revert !important;
+	min-height: revert !important;
+	padding-inline-end: revert !important;
+	margin-inline: revert !important;
+	opacity: revert !important;
+	font-weight: normal !important;
+}
+
+menulist > menupopup menuitem[_moz-menuactive]:not([disabled="true"]) {
+	color: revert !important;
+	background: revert !important;
+	background-color: revert !important;
+	outline: revert !important;
+}
+
+menulist > menupopup menuseparator {
+	padding: revert !important;
+}
+
+menulist > menupopup menucaption {
+	color: revert !important;
 }
 menuseparator {
 	padding: var(--gnome-menu-padding) 0 !important;

@@ -102,6 +102,14 @@ treechildren::-moz-tree-image(selected, focus, open),
 }
 
 
+@media (prefers-color-scheme: dark) {
+	#bookmarksPanel {
+		--gnome-icon-folder-symbolic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16px' viewBox='0 0 16 16' width='16px'%3E%3Cpath d='m 2.96875 1.003906 c -1.644531 0 -3 1.355469 -3 3 v 8 c 0 1.644532 1.355469 3 3 3 h 10 c 1.644531 0 3 -1.355468 3 -3 v -6 c 0 -1.644531 -1.355469 -3 -3 -3 h -3.585938 l -1.707031 -1.707031 c -0.1875 -0.1875 -0.441406 -0.292969 -0.707031 -0.292969 z m 0 2 h 3.585938 l 1 1 h -5.585938 c 0 -0.5625 0.4375 -1 1 -1 z m -1 2 h 11 c 0.5625 0 1 0.4375 1 1 v 6 c 0 0.5625 -0.4375 1 -1 1 h -10 c -0.5625 0 -1 -0.4375 -1 -1 z m 0 0' fill='%23fff' /%3E%3C/svg%3E");
+		--gnome-icon-pan-down-symbolic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16px' viewBox='0 0 16 16' width='16px'%3E%3Cpath d='m 3.292969 7.707031 l 4 4 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 l 4 -4 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 s -1.023437 -0.390625 -1.414062 0 l -3.292969 3.292969 l -3.292969 -3.292969 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 s -0.390625 1.023437 0 1.414062 z m 0 0' fill='%23fff' fill-rule='evenodd' /%3E%3C/svg%3E");
+		--gnome-icon-pan-end-symbolic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16px' viewBox='0 0 16 16' width='16px'%3E%3Cpath d='m 7 13 c 0.265625 0 0.519531 -0.101562 0.707031 -0.292969 l 4 -4 c 0.390625 -0.390625 0.390625 -1.023437 0 -1.414062 l -4.003906 -4 c -0.390625 -0.386719 -1.023437 -0.386719 -1.414063 0 c -0.386718 0.394531 -0.386718 1.027343 0.003907 1.414062 l 3.292969 3.292969 l -3.292969 3.292969 c -0.390625 0.390625 -0.390625 1.027343 0 1.414062 c 0.1875 0.191407 0.441406 0.292969 0.707031 0.292969 z m 0 0' fill='%23fff' fill-rule='evenodd' /%3E%3C/svg%3E");
+	}
+}
+
 button.close::before {
 	content: "";
 	display: block;

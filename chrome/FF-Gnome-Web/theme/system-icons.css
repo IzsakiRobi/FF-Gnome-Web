@@ -87,10 +87,18 @@
 
 
 toolbar .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack > .toolbarbutton-icon,
 #downloads-indicator-icon {
 	width: 16px !important;
 	height: 16px !important;
 	padding: 0 !important;
+	border-radius: 0 !important;
+	overflow: visible !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
+	background-color: transparent !important;
 }
 :root[customtitlebar] #titlebar .titlebar-button .toolbarbutton-icon,
 :root[customtitlebar][inFullscreen] #window-controls toolbarbutton .toolbarbutton-icon {

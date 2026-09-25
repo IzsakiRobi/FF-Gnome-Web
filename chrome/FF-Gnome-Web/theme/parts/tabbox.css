@@ -33,6 +33,12 @@
 	}
 }
 
+@media -moz-pref("sidebar.revamp") and (not -moz-pref("sidebar.verticalTabs")) {
+    #tabbrowser-tabbox[sidebar-shown]:not([sidebar-panel-open]) .browserContainer {
+        box-shadow: none !important;
+    }
+}
+
 @media (prefers-color-scheme: light) {
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
         --gnome-fixed-tab-background: transparent;
@@ -40,19 +46,23 @@
     }
 
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]) {
-        --gnome-fixed-tab-background: #ebebeb;
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-active-background);
     }
 
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:where(:hover) {
-        --gnome-fixed-tab-background: #f1f1f1;
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-hover-background);
     }
 
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]):where(:hover) {
-        --gnome-fixed-tab-background: #e4e4e5;
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-active-hover-background);
     }
 
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:where(:active) {
-        --gnome-fixed-tab-background: #d8d8d9;
+        --gnome-fixed-tab-background: var(--gnome-active-color);
+    }
+
+    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]):where(:active) {
+        --gnome-fixed-tab-background: var(--gnome-selected-active-color);
     }
 
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab > .tab-stack > .tab-background {
@@ -67,16 +77,58 @@
 
 @media (prefers-color-scheme: light) {
     #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:is([selected], [visuallyselected], [multiselected]) {
-        --gnome-fixed-tab-background: #d8d8d9;
+        --gnome-fixed-tab-background: var(--gnome-selected-color);
         --gnome-tabbar-tab-close-overlay-bg: var(--gnome-fixed-tab-background) !important;
     }
 
     #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:is([selected], [visuallyselected], [multiselected]):hover {
-        --gnome-fixed-tab-background: #cfcfd0;
+        --gnome-fixed-tab-background: var(--gnome-selected-hover-color);
     }
 
     #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:is([selected], [visuallyselected], [multiselected]) > .tab-stack > .tab-background {
         background: var(--gnome-fixed-tab-background) !important;
         box-shadow: none !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root[privatebrowsingmode="temporary"] #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:not(:hover):is([selected], [visuallyselected], [multiselected]) > .tab-stack > .tab-background {
+        background: var(--gnome-selected-color) !important;
+    }
+}
+
+:root[privatebrowsingmode="temporary"] #tabbrowser-tabs[orient="vertical"] {
+    .tabbrowser-tab {
+        --gnome-fixed-tab-background: transparent;
+        --gnome-tabbar-tab-close-overlay-bg: var(--gnome-fixed-tab-background) !important;
+    }
+
+    .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]) {
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-active-background);
+    }
+
+    .tabbrowser-tab:where(:hover) {
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-hover-background);
+    }
+
+    .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]):where(:hover) {
+        --gnome-fixed-tab-background: var(--gnome-tabbar-tab-active-hover-background);
+    }
+
+    .tabbrowser-tab:where(:active) {
+        --gnome-fixed-tab-background: var(--gnome-active-color);
+    }
+
+    .tabbrowser-tab:where([selected], [visuallyselected], [multiselected]):where(:active) {
+        --gnome-fixed-tab-background: var(--gnome-selected-active-color);
+    }
+
+    .tabbrowser-tab > .tab-stack > .tab-background {
+        background: var(--gnome-fixed-tab-background) !important;
+        box-shadow: none !important;
+    }
+
+    .tabbrowser-tab:active > .tab-stack > .tab-background {
+        transition: none !important;
     }
 }
