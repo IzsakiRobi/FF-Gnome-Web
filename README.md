@@ -15,9 +15,10 @@ This is a cleanup and refinement of the original project, not a rewrite. Modifie
 ## Installation
 
 1. Open `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
-2. Open `about:profiles` and open your active profile’s **Root Directory**.
-3. Copy the supplied `chrome` folder into that directory. Back up any existing `chrome` folder first.
-4. Restart Firefox.
+2. In `about:config`, set `browser.nova.enabled` to `false` for the best appearance.
+3. Open `about:profiles` and open your active profile’s **Root Directory**.
+4. Copy the supplied `chrome` folder into that directory. Back up any existing `chrome` folder first.
+5. Restart Firefox.
 
 ## Theme options
 
