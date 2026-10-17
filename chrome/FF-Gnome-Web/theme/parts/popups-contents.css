@@ -40,6 +40,10 @@
 	}
 }
 
+#PanelUI-fxa-menu-manage-account-button {
+	border-radius: var(--gnome-menu-item-radius) !important;
+}
+
 .proton-zap {
 	&::before {
 		border-image: none !important;

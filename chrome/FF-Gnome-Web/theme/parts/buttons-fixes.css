@@ -19,7 +19,15 @@ link[href="chrome://global/skin/menulist.css"] ~ dropmarker {
 }
 
 
-#nav-bar {
+/* Firefox 158 renamed the inner button background tokens. Let the theme's
+ * outer toolbarbutton paint the single hover/pressed surface. */
+#nav-bar,
+#TabsToolbar {
+	--toolbarbutton-background-color: transparent !important;
+	--toolbarbutton-background-color-hover: transparent !important;
+	--toolbarbutton-background-color-active: transparent !important;
+	--toolbarbutton-background-color-disabled: transparent !important;
+	--toolbarbutton-outline: none !important;
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
 }

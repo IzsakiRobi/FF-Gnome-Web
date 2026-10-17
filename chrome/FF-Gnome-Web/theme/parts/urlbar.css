@@ -22,6 +22,9 @@ toolbarspring {
 
 
 #urlbar {
+	/* Firefox 158 grows the open input with negative margins. The theme
+	 * already fixes its padding, so keep the inline geometry unchanged. */
+	--urlbar-input-growth-open-inline: 0px !important;
 	box-shadow: none !important;
 	&[breakout] {
 		width: calc(var(--urlbar-width) - var(--gnome-toolbar-spacing)) !important;
@@ -83,12 +86,12 @@ toolbarspring {
 
 
 .urlbarView {
-	background: transparent !important;
+	background: var(--gnome-menu-background) !important;
 	color: var(--gnome-window-color) !important;
-	margin: 11px 0 0 -3px !important;
+	margin: 2px 0 0 -3px !important;
     position: absolute !important;
     box-shadow: var(--gnome-menu-shadow) !important;
-    border-radius: 12px !important;
+    border-radius: var(--gnome-popover-radius) !important;
 	width: 100% !important;
 }
 
@@ -97,17 +100,21 @@ toolbarspring {
   margin-top: 7px !important;
 }
 
-.urlbarView-body-outer {
-	--item-padding-start: 0 !important;
-	--item-padding-end: 0 !important;
-    background: var(--gnome-menu-background) !important;
-	overflow-x: auto;
-	padding: 2px 6px !important;
-    border-radius: 8px 8px 0 0 !important;
+.urlbarView-background {
+	display: none !important;
 }
 
-.urlbarView-body-inner {
+.urlbarView-results {
+	box-sizing: border-box !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 6px !important;
 	border: 0 !important;
+}
+
+.urlbarView-row {
+	border: 0 !important;
+	border-radius: var(--gnome-button-radius) !important;
 }
 
 .urlbarView-row-inner, .urlbarView-no-wrap  {
@@ -115,7 +122,6 @@ toolbarspring {
 }
 .urlbarView-row-inner {
 	padding-block: 5px !important;
-	border-radius: 5px !important;
 }
 
 .urlbarView-row[selected] {
@@ -161,7 +167,7 @@ toolbarspring {
 
 
 #urlbar[focused] .urlbar-textbox-container {
-	margin: -1px !important;
+	margin: 0 !important;
 }
 #searchbar > .searchbar-textbox[focused] .searchbar-search-button {
 	margin-left: -1px !important;
@@ -270,11 +276,8 @@ toolbarspring {
 
 .searchmode-switcher-panel {
 	--panel-padding: 0 !important;
-}
-
-
-link[href="chrome://global/content/elements/panel-item.css"] ~ button {
-	border-radius: 9px !important;
+	--panel-menuitem-padding-block: 7px !important;
+	--button-background-color-menu-hover: var(--gnome-selected-color) !important;
 }
 
 .searchmode-switcher-panel-list {

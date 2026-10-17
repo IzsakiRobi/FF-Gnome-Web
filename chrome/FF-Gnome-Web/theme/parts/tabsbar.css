@@ -227,6 +227,10 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 
 .tab-background {
+	/* Firefox 158 draws the selected tab edge with an outline. Keep the
+	 * GNOME tab surface borderless in normal and private color schemes. */
+	outline: none !important;
+	border: 0 !important;
 	box-shadow: none !important;
 	transition: background var(--gnome-tab-animation-time) linear !important;
 	margin-block: 0 !important;
